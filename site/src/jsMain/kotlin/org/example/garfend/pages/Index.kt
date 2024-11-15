@@ -1,25 +1,43 @@
 package org.example.garfend.pages
 
 import androidx.compose.runtime.*
+import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
+import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.graphics.Colors
+import com.varabyte.kobweb.compose.ui.modifiers.background
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.core.Page
-import org.jetbrains.compose.web.dom.Text
-import com.varabyte.kobweb.worker.rememberWorker
-import org.example.garfend.worker.EchoWorker
+import org.example.garfend.components.BackToTopButton
+import org.example.garfend.components.overflowMenu
+import org.example.garfend.sections.*
+
 
 @Page
 @Composable
-fun HomePage() {
-    val worker = rememberWorker { EchoWorker { output -> console.log("Echoed: $output") } }
-    LaunchedEffect(Unit) {
-        worker.postInput("Hello, worker!")
-    }
+fun homePage() {
 
-    // TODO: Replace the following with your own content
-    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text("THIS PAGE INTENTIONALLY LEFT BLANK")
+    var menuOpened by remember { mutableStateOf(false) }
+    Box(modifier = Modifier.fillMaxSize().background(Colors.Black)) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            mainSection(onMenuClicked = { menuOpened = true })
+            aboutSection()
+            ServiceSection()
+            portfolioSection()
+            experienceSection()
+            contactSection()
+            footerSection()
+        }
+        BackToTopButton()
+        if (menuOpened) {
+            overflowMenu(onMenuClosed = { menuOpened = false })
+        }
     }
 }
+
