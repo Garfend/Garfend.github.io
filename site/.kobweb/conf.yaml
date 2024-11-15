@@ -1,0 +1,14 @@
+site:
+  title: "garfend landing page"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/kotlin-webpack/js/developmentExecutable/garfend.js"
+      api: "build/libs/garfend.jar"
+    prod:
+      script: "build/kotlin-webpack/js/productionExecutable/garfend.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
