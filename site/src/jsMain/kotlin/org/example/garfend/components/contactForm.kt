@@ -20,7 +20,7 @@ import org.jetbrains.compose.web.dom.*
 @Composable
 fun contactForm(breakpoint: Breakpoint) {
     Form(
-        action = "https://formspree.io/f/xbjeydwd",
+        action = "https://formspree.io/f/xbljkgkl",
         attrs = Modifier
             .attrsModifier {
                 attr("method", "POST")
