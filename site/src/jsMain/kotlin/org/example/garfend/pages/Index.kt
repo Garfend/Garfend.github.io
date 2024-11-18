@@ -10,7 +10,7 @@ import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.background
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.core.Page
-import org.example.garfend.components.BackToTopButton
+import org.example.garfend.components.backToTopButton
 import org.example.garfend.components.overflowMenu
 import org.example.garfend.sections.*
 
@@ -28,13 +28,13 @@ fun homePage() {
         ) {
             mainSection(onMenuClicked = { menuOpened = true })
             aboutSection()
-            ServiceSection()
+            serviceSection()
             portfolioSection()
             experienceSection()
             contactSection()
             footerSection()
         }
-        BackToTopButton()
+        backToTopButton()
         if (menuOpened) {
             overflowMenu(onMenuClosed = { menuOpened = false })
         }

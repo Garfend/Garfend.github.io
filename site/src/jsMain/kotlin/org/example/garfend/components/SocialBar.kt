@@ -29,7 +29,7 @@ fun socialBar(row: Boolean = false) {
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
-            SocialLinks(row = true)
+            socialLinks(row = true)
         }
     } else {
         Column(
@@ -42,13 +42,13 @@ fun socialBar(row: Boolean = false) {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            SocialLinks()
+            socialLinks()
         }
     }
 }
 
 @Composable
-private fun SocialLinks(row: Boolean = false) {
+private fun socialLinks(row: Boolean = false) {
     Link(
         path = "https://github.com/Garfend",
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB

@@ -1,6 +1,7 @@
 package org.example.garfend.models
 
-import org.example.garfend.util.Constants.LOREM_IPSUM_SHORTEST
+import org.example.garfend.util.Constants.ANDROID_DEV
+import org.example.garfend.util.Constants.UI_UX
 import org.example.garfend.util.Res
 
 enum class Service(
@@ -12,19 +13,13 @@ enum class Service(
     Android(
         icon = Res.Icon.android,
         imageDesc = "Android Icon",
-        title = "Android Development",
-        description = LOREM_IPSUM_SHORTEST
-    ),
-    IOS(
-        icon = Res.Icon.apple,
-        imageDesc = "Apple Icon",
-        title = "iOS Development",
-        description = LOREM_IPSUM_SHORTEST
+        title = "Mobile App Development",
+        description = ANDROID_DEV
     ),
     Design(
         icon = Res.Icon.design,
         imageDesc = "Pen Icon",
         title = "UX/UI Design",
-        description = LOREM_IPSUM_SHORTEST
+        description = UI_UX
     ),
 }

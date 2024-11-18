@@ -21,7 +21,7 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun ServiceSection() {
+fun serviceSection() {
     Box(
         modifier = Modifier
             .id(Section.Service.id)
@@ -30,12 +30,12 @@ fun ServiceSection() {
             .backgroundColor(Theme.LightGrayBg.rgb),
         contentAlignment = Alignment.Center
     ) {
-        ServiceContent()
+        serviceContent()
     }
 }
 
 @Composable
-fun ServiceContent() {
+fun serviceContent() {
     val breakpoint = rememberBreakpoint()
     Column(
         modifier = Modifier

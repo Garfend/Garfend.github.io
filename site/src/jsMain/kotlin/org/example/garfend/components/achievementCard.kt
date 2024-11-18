@@ -18,7 +18,7 @@ import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
 @Composable
-fun AchievementCard(
+fun achievementCard(
     modifier: Modifier = Modifier,
     animatedNumber: Int,
     achievement: Achievement
