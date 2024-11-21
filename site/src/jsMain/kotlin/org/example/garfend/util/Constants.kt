@@ -15,8 +15,8 @@ object Constants {
             "Applied development best practices \n" +
             "and applying clean code and clean architecture\n"
 
-    const val ANDROID_DEV ="I build scalable, high-performance mobile apps using Kotlin, Java, and Flutter. From concept to deployment, I deliver robust solutions tailored to your needs."
-    const val UI_UX ="I create user-friendly, visually stunning interfaces for Android and iOS apps. My designs focus on functionality, aesthetics, and exceptional user experiences."
+    const val ANDROID_DEV ="building scalable, high-performance mobile apps using Kotlin, Java, and Flutter. From concept to deployment, I deliver robust solutions tailored to your needs."
+    const val UI_UX ="creating user-friendly, visually stunning interfaces for Android and iOS apps. My designs focus on functionality, aesthetics, and exceptional user experiences."
     
     const val  ABOUT_ME_INFO = "Hello, I am Abdelrahman Abdelwahab, I am a Mobile App Developer and UI/UX Designer with a strong background in creating innovative, user-centered mobile applications. With expertise in Mobile development using Kotlin and Java for Android, and Flutter for cross-platform, I build apps that are not only just functional but also visually engaging and responsive, Full project management from start to finish, Regular communication is important to me, so let’s keep in touch."
 

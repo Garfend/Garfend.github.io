@@ -15,6 +15,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.example.garfend.components.contactForm
 import org.example.garfend.components.sectionTitle
+import org.example.garfend.components.socialBar
 import org.example.garfend.models.Section
 import org.example.garfend.models.Theme
 import org.example.garfend.util.Constants.SECTION_WIDTH
@@ -74,6 +75,7 @@ fun contactContent() {
             section = Section.Contact,
             alignment = Alignment.CenterHorizontally
         )
-        contactForm(breakpoint = breakpoint)
+        socialBar(title = true)
+//        contactForm(breakpoint = breakpoint)
     }
 }
