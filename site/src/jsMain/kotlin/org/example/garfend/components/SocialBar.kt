@@ -91,7 +91,7 @@ private fun socialLinks(
             ) {
 
                 Link(
-                    path = "https://www.linkedin.com/in/abdelrahman-abdelwahab-abo-ibrahim-91a01a214/",
+                    path = "https://github.com/Garfend",
                     openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB,
                     modifier = Modifier.textDecorationLine(TextDecorationLine.None)
                 ) {
