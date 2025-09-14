@@ -19,6 +19,7 @@ import org.example.garfend.components.socialBar
 import org.example.garfend.models.Section
 import org.example.garfend.models.Theme
 import org.example.garfend.styles.NavigationItemStyle
+import org.example.garfend.styles.LinkOverrideStyle
 import org.example.garfend.util.Constants.FONT_FAMILY
 import org.example.garfend.util.Constants.SECTION_WIDTH
 import org.jetbrains.compose.web.css.percent
@@ -73,6 +74,7 @@ fun footerMenu(row: Boolean = true) {
     Section.entries.toTypedArray().take(6).forEach { section ->
         Link(
             modifier = NavigationItemStyle.toModifier()
+                .then(LinkOverrideStyle.toModifier())
                 .fontFamily(FONT_FAMILY)
                 .padding(
                     right = if (row) 20.px else 0.px,

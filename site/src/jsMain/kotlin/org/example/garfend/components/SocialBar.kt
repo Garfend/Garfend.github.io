@@ -22,6 +22,7 @@ import org.example.garfend.models.Theme
 import org.example.garfend.styles.AboutTextStyle
 import org.example.garfend.styles.NavigationItemStyle
 import org.example.garfend.styles.SocialLinkStyle
+import org.example.garfend.styles.LinkOverrideStyle
 import org.example.garfend.util.Constants.FONT_FAMILY
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P
@@ -93,7 +94,8 @@ private fun socialLinks(
                 Link(
                     path = "https://github.com/Garfend",
                     openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB,
-                    modifier = Modifier.textDecorationLine(TextDecorationLine.None)
+                    modifier = LinkOverrideStyle.toModifier()
+                        .then(Modifier.textDecorationLine(TextDecorationLine.None))
                 ) {
                     Text("Garfend")
                 }
@@ -131,8 +133,8 @@ private fun socialLinks(
                 Link(
                     path = "https://www.linkedin.com/in/abdelrahman-abdelwahab-abo-ibrahim-91a01a214/",
                     openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB,
-                    modifier = Modifier.textDecorationLine(TextDecorationLine.None)
-
+                    modifier = LinkOverrideStyle.toModifier()
+                        .then(Modifier.textDecorationLine(TextDecorationLine.None))
                 ) {
                     Text("Abdelrahman Abdelwahab")
                 }

@@ -16,15 +16,23 @@ kobweb {
     app {
         index {
             description.set("Powered by Kobweb")
+            faviconPath.set("/favicon_v1.ico")
             head.add {
                 script {
                     src =
                         "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
                 }
+                // Add Font Awesome for icons
                 link {
                     rel = "stylesheet"
-                    href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+                    href =
+                        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 }
+                // Commenting out Bootstrap CSS to prevent link style overrides
+                // link {
+                //     rel = "stylesheet"
+                //     href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+                // }
             }
         }
     }

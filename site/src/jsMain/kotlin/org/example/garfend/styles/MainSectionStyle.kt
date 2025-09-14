@@ -19,6 +19,9 @@ val NavigationItemStyle = CssStyle {
         Modifier
             .styleModifier {
                 property("--bs-link-color", Theme.Secondary.rgb)
+                property("--silk-link-default-color", Theme.Secondary.rgb)
+                property("--silk-link-visited-color", Theme.Secondary.rgb)
+                property("color", "${Theme.Secondary.rgb} !important")
             }
             .color(Theme.Secondary.rgb)
             .transition(Transition.of(property = "color", duration = 200.ms))
@@ -27,6 +30,9 @@ val NavigationItemStyle = CssStyle {
         Modifier
             .styleModifier {
                 property("--bs-link-hover-color", Theme.DarkRed.rgb)
+                property("--silk-link-default-color", Theme.DarkRed.rgb)
+                property("--silk-link-visited-color", Theme.DarkRed.rgb)
+                property("color", "${Theme.DarkRed.rgb} !important")
             }
             .color(Theme.DarkRed.rgb)
     }
@@ -63,6 +69,27 @@ val MainButtonStyle = CssStyle {
     }
     hover {
         Modifier.width(120.px)
+    }
+}
+
+@OptIn(ExperimentalComposeWebApi::class)
+val LinkOverrideStyle = CssStyle {
+    base {
+        Modifier.styleModifier {
+            // Override Silk link variables and use important to override all defaults
+            property("--silk-link-default-color", "${Theme.Secondary.rgb} !important")
+            property("--silk-link-visited-color", "${Theme.Secondary.rgb} !important")
+            property("color", "${Theme.Secondary.rgb} !important")
+            property("text-decoration", "none !important")
+        }
+    }
+    hover {
+        Modifier.styleModifier {
+            property("--silk-link-default-color", "${Theme.DarkRed.rgb} !important")
+            property("--silk-link-visited-color", "${Theme.DarkRed.rgb} !important")
+            property("color", "${Theme.DarkRed.rgb} !important")
+            property("text-decoration", "none !important")
+        }
     }
 }
 

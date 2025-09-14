@@ -18,6 +18,7 @@ import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.example.garfend.models.Section
 import org.example.garfend.models.Theme
 import org.example.garfend.styles.NavigationItemStyle
+import org.example.garfend.styles.LinkOverrideStyle
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
@@ -75,6 +76,7 @@ fun rightSide() {
         Section.entries.toTypedArray().take(6).forEach { section ->
             Link(
                 modifier = NavigationItemStyle.toModifier()
+                    .then(LinkOverrideStyle.toModifier())
                     .padding(right = 30.px)
                     .fontFamily(FONT_FAMILY)
                     .fontSize(18.px)

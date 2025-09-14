@@ -22,6 +22,7 @@ import kotlinx.coroutines.launch
 import org.example.garfend.models.Section
 import org.example.garfend.models.Theme
 import org.example.garfend.styles.NavigationItemStyle
+import org.example.garfend.styles.LinkOverrideStyle
 import org.example.garfend.util.Constants.FONT_FAMILY
 import org.example.garfend.util.Res
 import org.jetbrains.compose.web.css.*
@@ -90,6 +91,7 @@ fun overflowMenu(onMenuClosed: () -> Unit) {
             Section.entries.toTypedArray().take(6).forEach { section ->
                 Link(
                     modifier = NavigationItemStyle.toModifier()
+                        .then(LinkOverrideStyle.toModifier())
                         .margin(bottom = 10.px)
                         .fontFamily(FONT_FAMILY)
                         .fontSize(16.px)
