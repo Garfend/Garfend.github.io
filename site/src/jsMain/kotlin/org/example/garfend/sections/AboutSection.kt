@@ -3,6 +3,7 @@ package org.example.garfend.sections
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.FontStyle
 import com.varabyte.kobweb.compose.css.FontWeight
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -17,6 +18,7 @@ import org.example.garfend.styles.AboutTextStyle
 import org.example.garfend.util.Constants.ABOUT_ME_INFO
 import org.example.garfend.util.Constants.FONT_FAMILY
 import org.example.garfend.util.Constants.SECTION_WIDTH
+import org.jetbrains.compose.web.css.AlignSelf
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P
@@ -47,9 +49,6 @@ fun aboutContent() {
 
 @Composable
 fun aboutMe() {
-
-
-
     Column(
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -66,6 +65,7 @@ fun aboutMe() {
                 .fontWeight(FontWeight.Normal)
                 .fontStyle(FontStyle.Italic)
                 .color(Theme.Secondary.rgb)
+                .textAlign(TextAlign.Center)
                 .toAttrs(),
         ) {
                 Text(ABOUT_ME_INFO)

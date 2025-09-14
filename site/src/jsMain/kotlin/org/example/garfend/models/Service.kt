@@ -2,6 +2,7 @@ package org.example.garfend.models
 
 import org.example.garfend.util.Constants.ANDROID_DEV
 import org.example.garfend.util.Constants.UI_UX
+import org.example.garfend.util.Constants.MOBILE_DEV
 import org.example.garfend.util.Res
 
 enum class Service(
@@ -22,4 +23,10 @@ enum class Service(
         title = "UX/UI Design",
         description = UI_UX
     ),
+    Mobile(
+        icon = Res.Icon.flutter,
+        imageDesc = "Flutter Icon",
+        title = "Cross-Platform Development (Flutter)",
+        description = MOBILE_DEV
+    )
 }

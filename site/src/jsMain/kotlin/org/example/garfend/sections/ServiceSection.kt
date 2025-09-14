@@ -52,7 +52,7 @@ fun serviceContent() {
             section = Section.Service,
             alignment = Alignment.CenterHorizontally
         )
-        SimpleGrid(numColumns = numColumns(base = 1, sm = 2, md = 2)) {
+        SimpleGrid(numColumns = numColumns(base = 1, sm = 2, md = 3)) {
             Service.entries.forEach { service ->
                 serviceCard(service = service)
             }

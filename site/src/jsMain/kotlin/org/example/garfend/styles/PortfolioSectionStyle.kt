@@ -1,6 +1,6 @@
 package org.example.garfend.styles
 
-import com.varabyte.kobweb.compose.css.CSSTransition
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.css.Visibility
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
@@ -15,7 +15,7 @@ val PortfolioSectionStyle = CssStyle {
     cssRule(" > #columnParent > #boxParent > #greenOverlay") {
         Modifier
             .width(0.px)
-            .transition(CSSTransition(property = "width", duration = 500.ms))
+            .transition(Transition.of(property = "width", duration = 500.ms))
     }
 
     cssRule(":hover > #columnParent > #boxParent > #greenOverlay") {
@@ -35,8 +35,8 @@ val PortfolioSectionStyle = CssStyle {
             .color(Theme.Secondary.rgb)
             .translateX(0.percent)
             .transition(
-                CSSTransition(property = "color", duration = 200.ms),
-                CSSTransition(property = "translate", duration = 200.ms)
+                Transition.of(property = "color", duration = 200.ms),
+                Transition.of(property = "translate", duration = 200.ms)
             )
     }
 
@@ -49,7 +49,7 @@ val PortfolioSectionStyle = CssStyle {
     cssRule(" > #columnParent > #portfolioDesc") {
         Modifier
             .translateX(0.percent)
-            .transition(CSSTransition(property = "translate", duration = 200.ms))
+            .transition(Transition.of(property = "translate", duration = 200.ms))
     }
 
     cssRule(":hover > #columnParent > #portfolioDesc") {
@@ -61,7 +61,7 @@ val PortfolioArrowIconStyle = CssStyle {
     base {
         Modifier
             .color(Theme.Gray.rgb)
-            .transition(CSSTransition(property = "color", duration = 200.ms))
+            .transition(Transition.of(property = "color", duration = 200.ms))
     }
     hover {
         Modifier.color(Theme.Primary.rgb)

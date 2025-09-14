@@ -95,7 +95,7 @@ fun portfolioCard(
                     .opacity(50.percent)
                     .toAttrs()
             ) {
-                Text(portfolio.description)
+                Text(portfolio.description.title)
             }
         }
     }

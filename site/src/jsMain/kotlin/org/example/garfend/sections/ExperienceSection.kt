@@ -67,7 +67,7 @@ fun experienceContent() {
         Experience.entries.forEach { experience ->
             experienceCard(
                 breakpoint = breakpoint,
-                active = experience == Experience.First,
+                active = experience.active,
                 experience = experience,
                 animatedMargin = animatedMargin
             )
